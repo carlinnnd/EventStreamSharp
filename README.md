@@ -34,24 +34,7 @@ O foco foi exercitar habilidades essenciais de mercado:
 A solução segue princípios de **Clean Architecture "lite"**, com uma clara separação entre a lógica de negócio (Core) e as camadas externas (API, UI), garantindo baixo acoplamento e alta testabilidade.
 
 ### Estrutura de Projetos
-```
-/
-├── EventStreamSharp/           # ▶️ Biblioteca Core (lógica de negócio)
-│   ├── Domain/                 # │   - Entidades imutáveis (EventRecord)
-│   ├── Ingest/                 # │   - Leitura e parsing de arquivos (EventLoader)
-│   └── Processing/             # │   - Motor de estatísticas (AnalyticsEngine)
-│
-├── EventStreamSharp.Api/       # ▶️ API Web (ponto de entrada de dados)
-│   ├── Data/                   # │   - Repositório e contexto do EF Core
-│   └── Program.cs              # │   - Endpoints, DI, e configuração
-│
-├── EventStreamSharp.Dashboard/ # ▶️ Dashboard CLI (cliente da API)
-│   ├── APIClient.cs            # │   - Cliente HTTP para consumir a API
-│   └── Program.cs              # │   - Interface com Spectre.Console
-│
-└── EventStreamSharp.Tests/     # ▶️ Testes Unitários
-    └── EventParserTests.cs     #     - Testes de unidade para o parser
-```
+![Estrutura do Projeto](images/project_structure.png)
 
 ### Fluxo de Dados
 ```mermaid
@@ -96,6 +79,12 @@ O `AnalyticsEngine` usa o poder do LINQ para agregar milhões de eventos de form
 - `Count()` com predicados para calcular sucessos e erros.
 - `Average()`, `Max()`, e `Min()` para calcular estatísticas de duração.
 
+### Persistência com SQLite
+Todas as métricas e informações de upload são persistidas em um banco de dados **SQLite** local através do **Entity Framework Core**. Isso garante que os dados históricos permaneçam disponíveis entre as execuções da aplicação.
+
+![Banco de Dados SQLite](images/sqlite_db.png)
+*Visualização das tabelas `Uploads` e `Metrics` em um cliente SQLite.*
+
 ### API RESTful com .NET
 A API expõe endpoints claros para interagir com o sistema:
 
@@ -112,6 +101,12 @@ Uma CLI construída com **Spectre.Console** que atua como uma mini-plataforma de
 - Tabelas de histórico bem formatadas.
 - Seleção interativa de serviços para detalhamento.
 - Gráficos de barra (`Sparkline`) para visualização rápida da taxa de sucesso.
+
+![Visualização do Histórico](images/dashboard_history.png)
+*Visualização do histórico de uploads no terminal.*
+
+![Detalhes do Serviço](images/dashboard_service_details.png)
+*Visualização de métricas detalhadas para um serviço específico.*
 
 ---
 
@@ -177,6 +172,8 @@ cd EventStreamSharp.Api
 dotnet run
 ```
 A API estará rodando e ouvindo em `http://localhost:5015`.
+
+![API em Execução](images/api_running.png)
 
 **Terminal 2: Iniciar o Dashboard**
 ```shell
