@@ -186,6 +186,13 @@ O dashboard irá iniciar, enviar os arquivos CSV da pasta `/eventos` para a API 
 ```shell
 dotnet test
 ```
+## 🤖 Uso de Inteligência Artificial
+
+-   **Revisão Arquitetural:** Discutir e validar a separação de responsabilidades e o design da solução.
+-   **Geração de Arquivos Teste:** Gerou arquivos no formato csv para teste da aplicação.
+-   **Aprendizado Acelerado:** Servir como um "tutor especialista em C#" para tirar dúvidas e acelerar o aprendizado do ecossistema .NET.
+-   **Documentação:** Ajuda na documentação do projeto com o apoio a escrita do arquivo Readme.md.
+---
 
 ## 💭 Considerações Finais
 
