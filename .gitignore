@@ -1,0 +1,67 @@
+# Output folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# ASP.NET
+appsettings.Development.json
+
+# Uploads and generated files
+uploads/
+eventos/
+*.csv
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
+*.cache
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+
+# Visual Studio cache / temp
+.vs/
+TestResults/
+.nuget/
+
+# JetBrains Rider
+.idea/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Dashboard generated artifacts
+EventStreamSharp.Dashboard/out/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
