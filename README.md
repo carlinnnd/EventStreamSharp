@@ -19,7 +19,7 @@ O EventStreamSharp simula um ecossistema de observabilidade, realizando as taref
 
 > Em sistemas distribuídos modernos, um único serviço pode gerar milhões de eventos por minuto. Como podemos processar esse volume de forma eficiente, extrair insights e garantir a resiliência do sistema mesmo quando os dados estão corrompidos?
 
-Este projeto nasceu como uma resposta a essa pergunta e com um objetivo claro: **aprender C# do zero e construir um projeto de portfólio que impressionasse um Tech Leader de Engenharia de Dados.**
+Este projeto nasceu como uma resposta a essa pergunta e com um objetivo claro: **aprender C# do zero e construir um bom projeto de portfólio .**
 
 O foco foi exercitar habilidades essenciais de mercado:
 -   Processamento de alto volume de dados (Big Data).
