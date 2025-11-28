@@ -19,7 +19,7 @@ O EventStreamSharp simula um ecossistema de observabilidade, realizando as taref
 
 > Em sistemas distribuídos modernos, um único serviço pode gerar milhões de eventos por minuto. Como podemos processar esse volume de forma eficiente, extrair insights e garantir a resiliência do sistema mesmo quando os dados estão corrompidos?
 
-Este projeto nasceu como uma resposta a essa pergunta e com um objetivo claro: **aprender C# do zero e construir um bom projeto de portfólio .**
+Este projeto nasceu como uma resposta a essa pergunta e com um objetivo claro: **aprender C# do zero e construir um bom projeto de portfólio baseado em casos reais .**
 
 O foco foi exercitar habilidades essenciais de mercado:
 -   Processamento de alto volume de dados (Big Data).
@@ -140,7 +140,7 @@ public void Parse_ComLinhaInvalida_DeveRetornarNulo()
 
 ---
 
-## 🛠️ Desafios Reais Encontrados e Soluções
+## 🛠️ Exemplos de Desafios Reais Encontrados e Soluções
 
 Durante o desenvolvimento, vários problemas reais surgiram. A solução deles demonstra um processo de engenharia maduro.
 
@@ -192,4 +192,4 @@ dotnet test
 
 ## 💭 Considerações Finais
 
-O EventStreamSharp é mais do que um simples projeto: é uma demonstração prática de um pipeline de dados realista, desde a ingestão resiliente até a visualização de métricas e testes automatizados. Ele reflete um processo de aprendizado rápido e disciplinado, resultando em uma solução com arquitetura sólida e código de alta qualidade.
+O EventStreamSharp é mais do que um simples projeto: é uma demonstração prática de um pipeline de dados realista, desde a ingestão resiliente até a visualização de métricas e testes automatizados. Ele reflete um processo de aprendizado rápido e disciplinado, resultando em uma solução com arquitetura sólida e boas práticas.
